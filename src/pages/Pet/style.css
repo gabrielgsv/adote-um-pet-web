@@ -1,0 +1,25 @@
+.box {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.minibox {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 7% 0px 7%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.title {
+  margin: 5px;
+  width: 300px;
+}

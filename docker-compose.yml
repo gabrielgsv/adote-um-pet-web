@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  adote-um-pet-web:
+    image: node:lts-alpine
+    working_dir: /usr/app
+    stdin_open: true
+    command: yarn
+    command: yarn start
+    ports:
+      - "3000:3000"
+    volumes: 
+      - "./:/usr/app"
