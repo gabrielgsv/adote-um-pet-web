@@ -1,6 +1,7 @@
 import React, { useEffect, useState, ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import api from "../../api"
 import "./style.css";
 import { useHistory } from "react-router-dom";
 import { removeAllPets } from "../../redux/actions/Pet";
@@ -29,6 +30,14 @@ const Home = () => {
   let history = useHistory();
 
   useEffect(() => {
+    api.get("https://adote-um-pet-api.herokuapp.com/pet/14200")
+      .then(res => {
+        console.log("Welcome")
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
     axios
       .get<IBGEUfReponse[]>(
         "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
